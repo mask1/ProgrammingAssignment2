@@ -1,6 +1,6 @@
 # These two functions take a matrix input and compute and output
-# its inverse.
-
+# its inverse matrix.
+#
 ## This function initializes the matrix 'x' and its 
 ## inverse in its own environment and in cache.
 makeCacheMatrix <- function(x = matrix()){
@@ -15,10 +15,10 @@ makeCacheMatrix <- function(x = matrix()){
   list(set = set, get = get, setinverse = setinverse, 
        getinverse = getinverse)
 }
-
-
+#
 ## cacheSolve takes any square matrix and checks whether its 
-## inverse had been cached, if not, the inverse is computed.
+## inverse had been cached and retrieves it;
+## if not, the inverse is computed.
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   inverseMatrix <- x$getinverse()
